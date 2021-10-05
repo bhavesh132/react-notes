@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    
+}
+
+body{
+    background-color: rgba(238, 238, 238, 0.8);
+}
+
+h1{
+    text-align: center;
+    color: rgba(160, 53, 53, 0.925)
+}
+
+.main{
+    text-align: center;
+    margin: auto;
+    width: 40%;
+    box-shadow: 2px 2px 12px black;
+    padding: 2rem;
+    
+}

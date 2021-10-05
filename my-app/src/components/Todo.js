@@ -1,29 +1,36 @@
-import { useState } from 'react'
+import React from "react";
+import classes from './Todo.module.css'
 
-import Modal from './Modal';
-import Backdrop from './Backdrop';
-
-function Todo(props) {
-    const [ modalIsOpen, setModalisOpen ] = useState(false);
-
-    function deleteHandler() {
-        setModalisOpen(true);
+const Todo = (props) => {
+    // Events
+    const deleteHandler = () => {
+        console.log(props.todo)
+        props.setTodos(props.todos.filter((el)=> el.id !== props.todo.id))
     }
 
-    function closeModalHandler(){
-        setModalisOpen(false);
+    const completeHandler = () => {
+        props.setTodos(props.todos.map((item)=> {
+            if (item.id === props.todo.id){
+                return {...item, completed: !item.completed}
+            }
+            return item
+        })
+        )
     }
-    
+
     return (
-        <div className="card">
-         <h2>{props.text}</h2>
-         <div className="actions">
-          <button className="btn" onClick={deleteHandler}>DELETE</button>  
-         </div> 
-         { modalIsOpen && <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler}/> }
-         { modalIsOpen && <Backdrop onClick = {closeModalHandler} />  }
-       </div>
-    );
+        <div className={classes.todoItem}>
+            <li className={`${classes.todo} ${props.todo.completed ? classes.completed: ''}`}> 
+                <div className={classes.todoText}> 
+                    {props.name}
+                </div>
+            </li>
+            <div className={classes.action}>
+                <button onClick={completeHandler} className={classes.completeBtn}>{props.todo.completed? "Not Completed" : "Complete"}</button>
+                <button onClick={deleteHandler} className={classes.deleteBtn}>Delete</button>
+            </div>
+        </div>
+    )
 }
 
-export default Todo;
+export default Todo

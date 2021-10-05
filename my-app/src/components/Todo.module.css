@@ -1,0 +1,63 @@
+.completed{
+    text-decoration: line-through;
+    opacity: 0.6
+}
+
+.todoItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem;
+    border: 1px solid black;
+    padding: 1rem 0.2rem;
+}
+
+.todo{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.action{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    /* border: 1px solid black; */
+    /* height:fit-content; */
+}
+
+.completeBtn, .deleteBtn{
+    width:50%;
+    height: 2rem;
+    margin: 3px;
+    border: none;
+    outline: none;
+    color:rgba(255, 255, 255, 0.99);
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all ease 0.3s;
+
+}
+
+.completeBtn{
+    background-color: rgba(45, 155, 12, 0.918);
+}
+
+.deleteBtn{
+    background-color: rgba(224, 33, 33, 0.989);
+}
+
+.completeBtn:hover{
+    background-color: rgba(72, 185, 37, 0.932);
+    transform: scale(1.05);
+}
+
+.deleteBtn:hover{
+    background-color: rgba(255, 73, 73, 0.989);
+    transform: scale(1.05);
+}
