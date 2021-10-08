@@ -1,0 +1,28 @@
+.searchContainer{
+    display: flex;
+    width:80%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    /* margin: 5px;  */
+}
+
+.searchText{
+    width:60%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid black;
+    font-size: 1rem;
+    border-radius: 3px;
+}
+
+.searchText:focus{
+    border-bottom: 2px solid rgba(200, 10, 10, 0.89);
+}
+
+.searchIcon{
+    font-size: 2rem;
+}
+

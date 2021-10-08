@@ -1,0 +1,89 @@
+.note{
+    background-color: #fef68a;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 1rem;
+    width:20rem;
+    height:20rem;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: pre-wrap;
+}
+
+.noteFooter{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+
+*::-webkit-scrollbar,
+*::-webkit-scrollbar-thumb {
+  width: 26px;
+  border-radius: 13px;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+  visibility:visible;
+}
+
+*::-webkit-scrollbar-thumb {        
+  box-shadow: inset 0 0 0 10px;
+}
+
+.save{
+  outline: none;
+  border:none;
+  width: 5rem;
+  height:1.9rem;
+  background-color: rgba(15, 119, 15, 0.87);
+  color: rgba(255,255,225,1);
+  border-radius: 6px;
+  transition: all ease 0.25s;
+}
+
+.save:hover{
+  cursor:pointer;
+  border:1px solid rgba(15, 119, 15, 0.87);
+  color: rgba(15, 119, 15, 0.87);
+  background-color: rgba(255,255,225,1);
+  transform: scale(1.1);
+}
+
+.deleteIcon{
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+
+.deleteIcon:hover{
+  transform: scale(1.3);
+  
+}
+
+.noteNew{
+  background-color: rgba(74, 199, 216, 0.87);
+  margin: 10px;
+  padding: 15px;
+  border-radius: 1rem;
+  width:20rem;
+  height:20rem;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+textarea{
+  background: none;
+  outline:none;
+  border:none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1em;
+  font-weight: lighter;
+  min-height:50px;
+  height:auto;
+  resize: none;
+  
+}
